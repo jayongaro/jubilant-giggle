@@ -1,0 +1,125 @@
+:root {
+  --bg: #f9fafb;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --card: #ffffff;
+  --border: #e5e7eb;
+  --accent: #6b7280; /* neutral gray */
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  width: min(100%, 920px);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.site-header {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0 8px;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.tagline {
+  margin: 4px 0 12px;
+  color: var(--muted);
+}
+
+.nav {
+  display: flex;
+  gap: 12px;
+  padding-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.nav a:hover {
+  background: var(--border);
+}
+
+.nav a[aria-current="page"] {
+  background: var(--accent);
+  color: #fff;
+}
+
+main.container {
+  padding: 24px 16px 48px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+.small {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.video-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.fb-embed {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.fb-embed iframe {
+  width: 100% !important;
+  min-height: 320px; /* adjust if your post has more/less text */
+  border: 0;
+}
+
+.site-footer {
+  background: var(--card);
+  border-top: 1px solid var(--border);
+  padding: 16px 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .nav {
+    gap: 8px;
+  }
+  .nav a {
+    padding: 6px 8px;
+  }
+}
